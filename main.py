@@ -12,10 +12,11 @@ def main():
     #print(get_book_text(filepath))
     filepath_string = str(filepath) #This is just books/frankentein.txt not the actual book text
     word_count = get_book_count(filepath)
-    sort_dict = sort_count(filepath)
+    sort_dict = sort_count(filepath) #count_list from stats.py
     print("============ BOOKBOT ============\n")
     print(f"Analyzing book found at {filepath_string}...\n")
     print(f"Found {word_count} total words\n")
     print(f"--------- Character Count -------\n")
-    print(f"{sort_dict}")
+    for item in sort_dict:
+        print(f"{item['char']}: {item['num']}")
 main()
