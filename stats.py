@@ -35,6 +35,6 @@ def sort_on(item):
 def sort_count(filepath):
     dict = get_char_count(filepath)
 
-    count_list = [{"char": char, "num": count} for char, count in dict.items() ] #.items() makes the list into key value pairs
+    count_list = [{"char": char, "num": count} for char, count in dict.items() ] #converts to list with .items() makes the list into key value pairs
     count_list.sort(reverse=True, key=sort_on) #runs the sort_on function as the key
     return count_list
