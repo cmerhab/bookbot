@@ -1,6 +1,7 @@
 from pathlib import Path
 from stats import get_book_count
 from stats import get_char_count
+from stats import sort_count
 
 def get_book_text(filepath): #function to return the file as a string
     with open(filepath, "r", encoding="utf-8") as file: #opens file in read only mode and sets it as f
@@ -13,4 +14,6 @@ def main():
     print(f"{word_count} words found in the document")
     char_count = get_char_count(filepath)
     print(f"{char_count}")
+    sort_dict = sort_count(filepath)
+    print(f"{sort_dict}")
 main()

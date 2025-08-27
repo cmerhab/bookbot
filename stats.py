@@ -11,7 +11,6 @@ def get_book_count(filepath):
         print(f"Error: File '{filepath}' not found!")
         return 0
     
-
 def get_char_count(filepath):
     char_count = {} #empty dictionary 
     try:
@@ -29,3 +28,13 @@ def get_char_count(filepath):
     except Exception as e:
         print(f"An error occured: {e}")
     return char_count
+
+def sort_on(item):
+    return item["num"] #returns the value in the num
+ 
+def sort_count(filepath):
+    dict = get_char_count(filepath)
+
+    count_list = [{"char": char, "num": count} for char, count in dict.items() ] #.items() makes the list into key value pairs
+    count_list.sort(reverse=True, key=sort_on) #runs the sort_on function as the key
+    return count_list
