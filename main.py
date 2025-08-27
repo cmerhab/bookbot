@@ -6,3 +6,5 @@ def get_book_text(filepath):
 def main():
     filepath = Path("books/frankenstein.txt")
     print(get_book_text(filepath))
+
+main()
