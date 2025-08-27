@@ -17,6 +17,6 @@ def main():
     filepath = Path("books/frankenstein.txt")
     #print(get_book_text(filepath))
     word_count = get_book_count(filepath)
-    print(f"{word_count} words was found in the document")
+    print(f"{word_count} words found in the document")
 
 main()
