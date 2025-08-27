@@ -11,7 +11,7 @@ def get_book_text(filepath): #function to return the file as a string
 def main():
     if len(sys.argv) < 2:
         print("Usage: python3 main.py <path_to_book>")
-        return
+        sys.exit(1) #exits program
     filepath = Path(sys.argv[1])
     filepath_string = str(filepath) #This is just books/frankentein.txt not the actual book text
     word_count = get_book_count(filepath)
