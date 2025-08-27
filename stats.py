@@ -21,9 +21,9 @@ def get_char_count(filepath):
 
         for char in text:
             if char in char_count:
-                char_count[char] += 1
+                char_count[char] += 1 #found second time or more
             else:
-                char_count[char] = 1
+                char_count[char] = 1 #found first time
     except FileNotFoundError:
         print(f"File not found: {filepath}")
     except Exception as e:
